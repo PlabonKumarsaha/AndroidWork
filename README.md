@@ -1,2 +1,3 @@
 # AndroidWork
-In this reposityory i will be keeping my codes that i do for practicing android
+This Repository Contains some practice and some solution code what i am doing at a beginner level.
+All the codes are written in java.
