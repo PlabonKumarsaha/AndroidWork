@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         list.add("GH");
         list.add("LM");
         list.add("AB");
+        //android.R.layout.Simple_list_item_1 is a provided layout by android studio it self..This shows how the list view will be shown
   final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,list);
   myListView.setAdapter(arrayAdapter);
        // Log.i("Kisu na","hoy.?");
