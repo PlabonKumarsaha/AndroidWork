@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Country profile</string>
+    <string name="bdInfo">
+
+        Bangladesh  Bengali:
+
+
+
+    </string>
+    <string name="indiaInfo">India india details bla bla bla.</string>
+    <string name="srilankainfo">Sri Lanka details
+        Colombo.</string>
+</resources>
+<--this will be a xml file-->
