@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+
+    android:background="#4DEE4D"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+    <Button
+        android:id="@+id/bangladeshButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bangladesh"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/download"
+        android:background="#2CAD31"/>
+
+    <Button
+        android:id="@+id/indiaButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="India"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/indicon"
+        android:background="#F7A12A"/>
+
+    <Button
+        android:id="@+id/SrilankaButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/lanka_iconn"
+        android:text="Srilanka"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+    </LinearLayout>
+
+</ScrollView>
