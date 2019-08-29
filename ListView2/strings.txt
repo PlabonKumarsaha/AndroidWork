@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ListViewPractice</string>
+
+<string-array name="country_name">
+
+    <item>"BD"</item>
+    <item>"IND"</item>
+    <item>"BHU"</item>
+    <item>"SL"</item>
+    <item>"NEP"</item>
+    <item>"CHI"</item>
+    <item>"MIA"</item>
+
+
+
+</string-array>
+
+
+</resources>
