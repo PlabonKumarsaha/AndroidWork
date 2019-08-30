@@ -1,0 +1,32 @@
+<androidx.appcompat.widget.SearchView
+       android:id="@+id/searchView"
+       app:queryHint="Enter Country Name"
+
+       android:background="#F8F5F5"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+
+       />
+
+
+
+MainActivity ::::
+
+
+private SearchView searchView;
+
+
+ searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                //offers query on changing text(Real time change)
+
+                adapter.getFilter().filter(s);
+                return false;
+            }
+        });
