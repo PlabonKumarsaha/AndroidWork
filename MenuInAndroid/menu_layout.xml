@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<!--here the show Action is equal to never means that they wil be only visible when the menu bar is clicked!
-if showASAction was always it will be shown in actionBar paralelly
+<!--here the showASAction is equal to "never" means that they wil be only visible when the menu bar is clicked!
+if showASAction was "always" it will be shown in actionBar paralelly
 and if IsRoom is selected then if the action bar has ample space only then it will be shown!
 -->
 
