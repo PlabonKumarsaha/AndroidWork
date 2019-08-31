@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--here the show Action is equal to never means that they wil be only visible when the menu bar is clicked!
+if showASAction was always it will be shown in actionBar paralelly
+and if IsRoom is selected then if the action bar has ample space only then it will be shown!
+-->
+
+
+    <!--to add image from andoid studio clcik right on drawable >>new>>vector asset>>click on the android icon!
+the selected icon will be imported in drawable!
+-->
+
+    <!-- The icon will remove the text and replace it with icon only!The icon gets more priority then the text!-->
+
+    <item
+
+        android:id="@+id/settingId"
+        android:title="Setting"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_settings_black_24dp"/>
+
+
+
+    <item
+        android:id="@+id/shareId"
+        android:title="Share"
+        app:showAsAction="never"
+        />
+
+    <item
+    android:id="@+id/feedbackId"
+    android:title="Feedback"
+    app:showAsAction="always"
+    />
+
+
+
+    <item
+        android:id="@+id/AboutUsId"
+        android:title="ABout Us"
+        app:showAsAction="never"
+        />
+
+</menu>
