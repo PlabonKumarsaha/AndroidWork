@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MyGridView</string>
+
+
+    <string-array name="country_name">
+    <item>"AFG"</item>
+    <item>"BD"</item>
+    <item>"BHU"</item>
+    <item>"IND"</item>
+    <item>"SL"</item>
+    <item>"NEP"</item>
+    <item>"THAI"</item>
+
+
+    </string-array>
+</resources>
