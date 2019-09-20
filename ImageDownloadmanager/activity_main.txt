@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="6">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <EditText
+            android:id="@+id/editTextid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="write something"
+            android:textSize="17sp"
+            android:padding="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.25"
+        android:orientation="vertical"
+        android:id="@+id/ll"
+        android:visibility="gone">
+        <ProgressBar
+            android:id="@+id/progessbarid"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+        <TextView
+            android:id="@+id/textviewID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading........"
+            android:textSize="50sp"
+            android:textColor="#1A32B8"
+            />
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/downloadbtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:text="Download"
+        android:textSize="20sp"
+/>
+    <LinearLayout
+        android:layout_weight="3.25"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        >
+
+        <ListView
+            android:id="@+id/listViewID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>
