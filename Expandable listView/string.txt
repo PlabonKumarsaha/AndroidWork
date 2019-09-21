@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">ExpandAbleListView</string>
+
+
+    <array name="abbreviation_list_holder">
+
+        <item>"AAC"</item>
+        <item>"AI"</item>
+        <item>"APPANET"</item>
+        <item>"ALGON"</item>
+        <item>"ALU"</item>
+        <item>"AOP"</item>
+        <item>"API"</item>
+        <item>"ATP"</item>
+        <item>"ARP"</item>
+        <item>"ACB"</item>
+        <item>"BUS"</item>
+        <item>"BIG"</item>
+        <item>"ALA"</item>
+        <item>"BAL"</item>
+
+    </array>
+
+
+    <array name="abbreviation_list_child">
+
+        <item>"ace kisu ekta"</item>
+        <item>"Arti inti"</item>
+        <item>"kono jana nai"</item>
+        <item>"komu kno.?"</item>
+        <item>"Onek boro"</item>
+        <item>"jbdajbdjabdajd"</item>
+        <item>"AadajdajdadPI"</item>
+        <item>"AadknakdnakdTP"</item>
+        <item>"ARdkandkadnadP"</item>
+        <item>"ACmdakndkadB"</item>
+        <item>"BUdadadddadadS"</item>
+        <item>"BIdadadadG"</item>
+        <item>"ALdadadaA"</item>
+        <item>"BadadeefcdcAL"</item>
+
+    </array>
+
+
+</resources>
