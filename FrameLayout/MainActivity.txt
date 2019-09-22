@@ -1,0 +1,46 @@
+package com.example.tablelayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private ImageView imageView1,imageView2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        //Frame layout contains various viewGroup..But in this layout all those viewgroups will not be visible at once..
+        // example 2nd button will be under first button..
+        // 3rd button is under 2nd button..so it gets like a stack..This kind of layout can be useful in Showing pictures..One image can be shown after another!
+        imageView1 = findViewById(R.id.image1ID);
+        imageView2 = findViewById(R.id.image2ID);
+
+
+        imageView1.setOnClickListener(this);
+        imageView2.setOnClickListener(this);
+
+
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        if(view.getId() == R.id.image1ID)
+        {
+            imageView1.setVisibility(View.GONE);
+            imageView2.setVisibility(View.VISIBLE);
+        }
+
+        else if(view.getId() == R.id.image2ID)
+        {
+            imageView2.setVisibility(View.GONE);
+            imageView1.setVisibility(View.VISIBLE);
+
+        }
+
+    }
+}
