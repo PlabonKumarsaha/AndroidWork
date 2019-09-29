@@ -1,0 +1,59 @@
+package com.example.sqllite;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Build;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+
+public class MyDataBaseHelper extends SQLiteOpenHelper {
+
+    private static String DataBaseName = "Student.db";
+    private static String TableName = "student_details";
+    private  static  int version = 1;
+
+    private  static  String ID = "_id";
+    private  static  String Name = "Name";
+    private  static  String Age = "Age";
+
+    private  Context context;
+
+    String createTable = "Create Table " + TableName + " ( " + ID + " INTEGER PRIMARY KEY AUTOINCREMENT , "
+            + Name + " VARCHAR(255) ,"
+            + Age + " VARCHAR(255));";
+
+
+
+
+
+    @RequiresApi(api = Build.VERSION_CODES.P)
+    public MyDataBaseHelper(@Nullable Context context) {
+        //super(context, name, version, openParams);
+        super(context, DataBaseName, null, version);
+        this.context = context;
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+        try {
+
+            sqLiteDatabase.execSQL(createTable);
+            Toast.makeText(context,"Table Is created!",Toast.LENGTH_SHORT).show();
+        }
+        catch (Exception e)
+        {
+            Toast.makeText(context,"Unsucessful "+e,Toast.LENGTH_SHORT).show();
+        }
+
+
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+
+    }
+}
