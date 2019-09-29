@@ -20,18 +20,25 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
     private  static  String Name = "Name";
     private  static  String Age = "Age";
 
+    private  static  String Gender = "Gender";
+
+
     private  Context context;
 
     String createTable = "Create Table " + TableName + " ( " + ID + " INTEGER PRIMARY KEY AUTOINCREMENT , "
             + Name + " VARCHAR(255) ,"
-            + Age + " VARCHAR(255));";
+            + Gender + " VARCHAR(25) ,"
+            + Age + " VARCHAR(25));";
+
+
+    String dropTable = "Drop table IF EXISTS "+TableName+";";
 
 
 
 
 
-    @RequiresApi(api = Build.VERSION_CODES.P)
-    public MyDataBaseHelper(@Nullable Context context) {
+
+    public MyDataBaseHelper( Context context) {
         //super(context, name, version, openParams);
         super(context, DataBaseName, null, version);
         this.context = context;
@@ -54,6 +61,19 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+
+try {
+    sqLiteDatabase.execSQL(dropTable);
+    onCreate(sqLiteDatabase);
+    //after modification of the datbase the version number must be upgraded too!
+    version++;
+    Toast.makeText(context,"Table Upgraded ",Toast.LENGTH_SHORT).show();
+}
+catch (Exception e)
+{
+    Toast.makeText(context,"Unsucessful "+e,Toast.LENGTH_SHORT).show();
+}
+
 
     }
 }
