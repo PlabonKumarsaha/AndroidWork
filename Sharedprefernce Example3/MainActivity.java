@@ -32,11 +32,7 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.textView);
         linerLayoutid = findViewById(R.id.linerLayoutid);
 
-        if(loadColor()!= BLACK)
-        {
-            linerLayoutid.setBackgroundColor(BLACK);
-        }
-
+            linerLayoutid.setBackgroundColor(loadColor());
 
 
 
