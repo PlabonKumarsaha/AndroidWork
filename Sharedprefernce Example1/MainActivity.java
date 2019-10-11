@@ -75,7 +75,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             {
                 String name = sharedPreferences.getString("usernameKey","Data not found");
                 String password = sharedPreferences.getString("passwordKey","Data not found");
-                detailsTextViewId.setText("User Name : "+name+"\n"+"Password"+password);
+                // detailsTextViewId.setText("User Name : "+name+"\n"+"Password"+password);
+                usernameEditText.setText(name);
+                passwordEditText.setText(password);
             }
 
         }
