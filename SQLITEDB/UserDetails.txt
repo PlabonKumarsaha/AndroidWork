@@ -1,0 +1,66 @@
+package com.example.bitmsqlite;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import Database.DataBaseHelper;
+import Database.PersonDetails;
+
+public class UserDetails extends AppCompatActivity {
+
+    EditText NameEditText,EmailEditText,phoneEditText,AdressEditText,passwordEditText;
+    Button saveBtn,showBtn;
+    DataBaseHelper dataBaseHelper;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_user_details);
+
+        NameEditText = findViewById(R.id.NameEditText);
+        EmailEditText = findViewById(R.id.EmailEditText);
+        phoneEditText = findViewById(R.id.phoneEditText);
+        AdressEditText = findViewById(R.id.AdressEditText);
+        passwordEditText = findViewById(R.id.passwordEditText);
+        saveBtn = findViewById(R.id.saveBtn);
+        saveBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PersonDetails personDetails = new PersonDetails();
+                personDetails.setName(NameEditText.getText().toString());
+                personDetails.setEmail(EmailEditText.getText().toString());
+                personDetails.setAdress(AdressEditText.getText().toString());
+                personDetails.setPhone(phoneEditText.getText().toString());
+                personDetails.setPassword(passwordEditText.getText().toString());
+
+                dataBaseHelper = new DataBaseHelper(getApplicationContext());
+
+                 long id = dataBaseHelper.insertData(personDetails);
+                 if(id == -1){
+                     Toast.makeText(getApplicationContext(),"Insert erro!",Toast.LENGTH_SHORT).show();
+                 }
+                 else {
+                     Toast.makeText(getApplicationContext(),"data Insert !",Toast.LENGTH_SHORT).show();
+                 }
+
+
+
+            }
+        });
+
+
+        showBtn = findViewById(R.id.showBtn);
+        showBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+    }
+}

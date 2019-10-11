@@ -1,0 +1,41 @@
+package com.example.bitmsqlite;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class sineupActivity extends AppCompatActivity {
+
+    Button createBtn,showBtn;
+    EditText usernameEditText,passwordEditText;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_sineup);
+        createBtn = findViewById(R.id.createBtn);
+
+        showBtn = findViewById(R.id.showBtn);
+
+        passwordEditText = findViewById(R.id.passwordEditText);
+        usernameEditText = findViewById(R.id.usernameEditText);
+
+        createBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+
+        showBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+    }
+}
