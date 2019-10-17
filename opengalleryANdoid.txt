@@ -1,0 +1,7 @@
+ private void openGallery() {
+
+        Intent galleryIntent = new Intent();
+        galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
+        galleryIntent.setType("image/*");
+        startActivityForResult(galleryIntent,galleryPic);
+    }
