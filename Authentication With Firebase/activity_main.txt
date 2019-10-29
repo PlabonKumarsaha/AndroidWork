@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#6678E2">
+
+<EditText
+    android:layout_marginTop="40dp"
+    android:id="@+id/EmailEditText"
+    android:hint="Enter Email"
+    android:textColorHint="#DF618B"
+    android:textColor="#DF618B"
+    android:textSize="30sp"
+    android:textStyle="bold"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    />
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/PasswordEditText"
+        android:inputType="textPassword"
+        android:hint="Enter Password"
+        android:textColorHint="#DF618B"
+        android:textColor="#DF618B"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:id="@+id/sineInbtn"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sine In"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/sineUpTextViewId"
+        android:text="Are you not registerd yet?sine up"
+        android:textSize="20dp"
+        android:textColor="#F3E140"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:id="@+id/progessbarId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+</LinearLayout>
