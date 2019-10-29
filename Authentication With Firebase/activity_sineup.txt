@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SineupActivity"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:layout_marginTop="40dp"
+        android:id="@+id/sineUPEmailEditText"
+        android:hint="Enter Email"
+        android:textColorHint="#DF618B"
+        android:textColor="#DF618B"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/sineUPPasswordEditText"
+        android:inputType="textPassword"
+        android:hint="Enter Password"
+        android:textColorHint="#DF618B"
+        android:textColor="#DF618B"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:id="@+id/sineupbtn"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sine Up"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/sineUpTextViewId"
+        android:text="Already Registerd?sine In"
+        android:textSize="20dp"
+        android:textColor="#F3E140"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:id="@+id/progessbarId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>
