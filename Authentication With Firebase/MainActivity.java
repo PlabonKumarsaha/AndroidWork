@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 if(task.isSuccessful())
                 {
+                    //finished the activity after login..bcz if we press the back button we don't need to come to this activity
                     finish();
                     Intent intent = new Intent(MainActivity.this,RandromActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
