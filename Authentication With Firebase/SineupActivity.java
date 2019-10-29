@@ -18,6 +18,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 import java.util.regex.Pattern;
 
@@ -113,7 +114,17 @@ public class SineupActivity extends AppCompatActivity implements View.OnClickLis
                     // If sign in fails, display a message to the user.
                     progessbarId.setVisibility(View.GONE);
 
-                    Toast.makeText(getApplicationContext(),"Register Is not sucessful",Toast.LENGTH_SHORT).show();
+                    //checking unscessful types
+                    if(task.getException() instanceof FirebaseAuthUserCollisionException)
+                    {
+                        //already registerd
+                        Toast.makeText(getApplicationContext(),"This mail is already taken",Toast.LENGTH_SHORT).show();
+
+                    }
+                    else {
+                        //error
+                        Toast.makeText(getApplicationContext(), "Register Is not sucessful bcz of "+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    }
                 }
 
             }
