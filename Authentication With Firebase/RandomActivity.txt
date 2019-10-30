@@ -1,14 +1,46 @@
 package com.example.firebaseuploadexample;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class RandromActivity extends AppCompatActivity {
+
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_randrom);
+
+        // Initialize Firebase Auth
+        mAuth = FirebaseAuth.getInstance();
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_layout,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.sineoutMenuItem)
+        {
+            //closing the activity after sine up so the back button can't take you back there!
+            FirebaseAuth.getInstance().signOut();
+            finish();
+            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
