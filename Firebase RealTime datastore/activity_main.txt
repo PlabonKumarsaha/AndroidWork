@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+   <EditText
+       android:id="@+id/nameEditText"
+       android:layout_marginTop="15dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Enter your Name"
+       android:textAppearance="@style/TextAppearance.AppCompat.Large"
+       />
+
+    <EditText
+        android:id="@+id/ageEditText"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your Age"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        />
+
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="save Data"
+        android:textSize="25dp"
+        android:background="#E4638F"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+        />
+
+
+    <Button
+        android:id="@+id/loadBtn"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Data"
+        android:textSize="25dp"
+        android:background="#E4638F"
+        style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+        />
+
+</LinearLayout>
